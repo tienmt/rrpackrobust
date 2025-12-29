@@ -1,10 +1,10 @@
 # rrpack_robust
 rrpack_robust: robust reduced rank regression to heavy-tailed noise and outlier, missing data
 
-`rrpackrobust` is an R package for **robust multivariate linear regression with low-rank structure**, combining  
-Huber loss for robustness against heavy-tailed noise and outliers with **spectral regularization** to enforce reduced rank.
+`rrpackrobust` is an R package for **robust multiple-response linear regression with low-rank structure**, combining  
+Huber loss for robustness against heavy-tailed noise and outliers with spectral regularization to enforce reduced rank.
 
-The package supports **nonconvex penalties (SCAD, MCP)** as well as the **nuclear norm**, and provides **cross-validated tuning** via an efficient proximal-gradient algorithm implemented in C++.
+The package supports **nonconvex penalties (SCAD, MCP)** as well as the **nuclear norm**, and provides cross-validated tuning via an efficient proximal-gradient algorithm implemented in C++.
 
 ---
 
@@ -15,10 +15,10 @@ The package supports **nonconvex penalties (SCAD, MCP)** as well as the **nuclea
   - **SCAD**
   - **MCP**
   - **Nuclear norm**
-- Efficient **proximal-gradient solver** implemented in C++
-- **K-fold cross-validation** for tuning regularization parameters
+- Efficient proximal-gradient solver implemented in C++
+- K-fold cross-validation for tuning regularization parameters
 - Handles **missing values in the response matrix**
-- Designed for **high-dimensional** and **heavy-tailed** data
+- Designed for high-dimensional and **heavy-tailed** data
 
 ---
 
