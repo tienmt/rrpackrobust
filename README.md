@@ -16,7 +16,7 @@ The package supports **nonconvex penalties (SCAD, MCP)** as well as the **nuclea
   - **MCP**
   - **Nuclear norm**
 - Efficient proximal-gradient solver implemented in C++
-- K-fold cross-validation for tuning regularization parameters
+- K-fold cross-validation for tuning regularization parameters: for both **lambda and tau (in Huber loss)**
 - Handles **missing values in the response matrix**
 - Designed for high-dimensional and **heavy-tailed** data
 
