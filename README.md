@@ -1,11 +1,6 @@
 # rrpack_robust
 rrpack_robust: robust reduced rank regression to heavy-tailed noise and outlier, missing data
 
----
-
-````markdown
-
-
 `rrpackrobust` is an R package for **robust multivariate linear regression with low-rank structure**, combining  
 Huber loss for robustness against heavy-tailed noise and outliers with **spectral regularization** to enforce reduced rank.
 
