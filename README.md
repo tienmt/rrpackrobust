@@ -51,7 +51,7 @@ where:
 
 ```r
 # install.packages("devtools")
-devtools::install_github("YOUR_GITHUB_USERNAME/rrpackrobust")
+devtools::install_github("tienmt/rrpackrobust")
 ````
 
 You will need a working C++ toolchain:
