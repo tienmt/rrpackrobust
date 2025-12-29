@@ -12,36 +12,13 @@ The package supports **nonconvex penalties (SCAD, MCP)** as well as the **nuclea
 
 - Robust multivariate regression using **Huber loss**
 - Reduced rank structure via **spectral penalties**
-  - SCAD
-  - MCP
-  - Nuclear norm
+  - **SCAD**
+  - **MCP**
+  - **Nuclear norm**
 - Efficient **proximal-gradient solver** implemented in C++
 - **K-fold cross-validation** for tuning regularization parameters
 - Handles **missing values in the response matrix**
 - Designed for **high-dimensional** and **heavy-tailed** data
-
----
-
-## Model
-
-Given predictors \( X \in \mathbb{R}^{n \times p} \) and multivariate responses  
-\( Y \in \mathbb{R}^{n \times q} \), the package solves:
-
-\[
-\min_{B \in \mathbb{R}^{p \times q}}
-\frac{1}{n} \sum_{i=1}^n \ell_\tau(Y_i - X_i B)
-\;+\;
-\lambda \sum_{j} r(\sigma_j(B)),
-\]
-
-where:
-
-- \( \ell_\tau(\cdot) \) is the **Huber loss**
-- \( \sigma_j(B) \) are the singular values of \( B \)
-- \( r(\cdot) \) is a spectral penalty:
-  - **SCAD**
-  - **MCP**
-  - **Nuclear norm**
 
 ---
 
@@ -132,7 +109,8 @@ X <- matrix(rnorm(n * p), n, p)
 Y <- X %*% Btrue + matrix(rt(n * q, df = 3), n, q)
 
 ## Introduce missing values
-idx_na <- sample(seq_len(n * q), floor(0.2 * n * q))
+missing_rate = 0.2
+idx_na <- sample(seq_len(n * q), floor(missing_rate * n * q))
 Y[idx_na] <- NA
 
 ## Cross-validated robust RRR
