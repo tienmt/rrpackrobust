@@ -45,9 +45,7 @@ where:
 
 ---
 
-## Installation
-
-### From GitHub
+# Installation From GitHub
 
 ```r
 # install.packages("devtools")
@@ -113,6 +111,8 @@ Returns the optimal coefficient matrix, CV loss surface, and selected parameters
 ## Example
 
 ```r
+ library(rrpackrobust)
+
 set.seed(123)
 
 n <- 200
